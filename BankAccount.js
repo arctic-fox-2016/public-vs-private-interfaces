@@ -1,21 +1,33 @@
 "use strict"
 
-// release 0
-const ACCT_NUMBER = new ChangeThis()
+const ACCT_NUMBER = new WeakMap()
 
 class BankAccount {
-  constructor(customer_name, type, acct_number) {}
+  constructor(customer_name, type, acct_number) {
+    //
+  }
 
-  to_s() {}
+  // private getter
+  get account_number() {
+    //
+  }
 
-  cover_digits() {}
+  to_s() {
+    //
+  }
+
+  cover_digits() {
+    //
+  }
 }
 
-let my_acct = new BankAccount("Name", "Checking", "000-000-000")
+let my_acct = new BankAccount("Hacktivate", "Checking", "333-555-888")
 
 console.log(my_acct)
-console.log(my_acct.ACCT_NUMBER.get(this))
+console.log(my_acct.account_number)
+
+// release 0
+my_acct.to_s() // "Hacktivate: Checking# 333-555-888"
 
 // release 1
-my_acct.to_s() // "Name: Checking# 000-000-000"
-my_acct.cover_digits() // "Name: Checking# ***-***-000"
+my_acct.cover_digits() // "Hacktivate: Checking# ***-***-888"
